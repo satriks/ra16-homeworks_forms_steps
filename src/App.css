@@ -85,6 +85,7 @@ label > input , .steps-btn {
 .step{
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .step-container{
@@ -101,4 +102,27 @@ label > input , .steps-btn {
 
 .steps-place{
   height: 20px;
+}
+
+.step-actions > button {
+  background-color:aliceblue;
+  color: black;
+}
+
+.step-modal{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid black;
+  color: black;
+}
+
+.step-km-redact{
+  height: 30px;
+  width: 50px;
+  background-color: floralwhite;
+  color: black;
 }
