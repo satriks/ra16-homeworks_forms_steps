@@ -1,4 +1,4 @@
-import { useRef } from "react"
+
 import Popup from "reactjs-popup"
 import { v4 }from 'uuid'
 
@@ -9,15 +9,14 @@ interface StepType {
 
 interface Props {
     data : StepType[],
-    onChange : Function,
+    onChange : (add : string, date : string) => void,
     onDel : (evt : React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
 
 }
 
 
 
-const Step = ({data, onChange, onDel} : Props ) => {
-    const changeInput = useRef()   
+const Step = ({data, onChange, onDel} : Props ) => { 
     
     return data.sort((a:StepType, b:StepType) => {
 
@@ -28,7 +27,7 @@ const Step = ({data, onChange, onDel} : Props ) => {
         .map( (el : StepType) => {
             
             const key = v4()
-            let date: string | null = null
+            let date: string = ""
             
                     return (
                         
